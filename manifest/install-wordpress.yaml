@@ -1,4 +1,3 @@
-cat > /tmp/wordpress-ds.yaml <<EOF
 apiVersion: v1
 kind: Service
 metadata:
@@ -117,4 +116,3 @@ data:
   WORDPRESS_DB_HOST: mysql
   #WORDPRESS_DB_NAME: wordpress
   WORDPRESS_DB_USER: root
-EOF

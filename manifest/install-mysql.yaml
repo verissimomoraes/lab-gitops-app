@@ -1,4 +1,3 @@
-cat > /tmp/mysql-st.yaml <<EOF
 apiVersion: v1
 kind: Secret
 metadata:
@@ -82,6 +81,3 @@ spec:
     - name: tcp
       protocol: TCP
       port: 3306
-
-
-EOF
