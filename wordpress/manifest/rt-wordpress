@@ -12,5 +12,5 @@ spec:
     name: wordpress-svc-clusterip
     weight: 100
   port:
-    targetPort: 80
+    targetPort: 8080
   wildcardPolicy: None
