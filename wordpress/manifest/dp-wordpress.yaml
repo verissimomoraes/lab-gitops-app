@@ -20,7 +20,7 @@ spec:
         tier: frontend
     spec:
       containers:
-      - image: mage-registry.openshift-image-registry.svc:5000/openshift/php@sha256:220bfb1a268cff890f78cc7ca3354e831ddae7d11edcd41a5276ca309b981742
+      - image: image-registry.openshift-image-registry.svc:5000/gitops-app/wordpress
         name: wordpress
         envFrom:
           - secretRef:
