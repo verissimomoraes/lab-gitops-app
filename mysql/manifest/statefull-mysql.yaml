@@ -34,7 +34,8 @@ spec:
       name: mysql-data
       namespace: gitops-app
     spec:
-      storageClassName: longhorn
+      #storageClassName: longhorn
+      storageClassName: azurefile-csi
       accessModes:
         - ReadWriteOnce
       resources:
