@@ -26,7 +26,7 @@ spec:
         - 1000710001
         fsGroup: 0      
       containers:
-      - image: wordpress:5.4-php7.2-apache
+      - image: mage-registry.openshift-image-registry.svc:5000/openshift/php@sha256:220bfb1a268cff890f78cc7ca3354e831ddae7d11edcd41a5276ca309b981742
         name: wordpress
         envFrom:
           - secretRef:
