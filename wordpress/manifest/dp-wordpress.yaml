@@ -19,6 +19,12 @@ spec:
         app: wordpress
         tier: frontend
     spec:
+      securityContext:
+        seLinuxOptions:
+          level: 's0:c27,c4'
+        supplementalGroups:
+        - 1000710001
+        fsGroup: 0      
       containers:
       - image: wordpress:5.4-php7.2-apache
         name: wordpress
