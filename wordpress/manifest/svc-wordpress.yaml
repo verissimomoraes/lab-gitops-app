@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: wordpress
-  namespace: wordpress
+  namespace: gitops-app
   labels:
     app: wordpress
     app.kubernetes.io/component: wordpress
