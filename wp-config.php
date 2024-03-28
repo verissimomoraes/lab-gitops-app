@@ -20,7 +20,7 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', '$WORDPRESS_DB_NAME');
+define( 'DB_NAME', 'WORDPRESS_DB_NAME');
 
 /** MySQL database username */
 define( 'DB_USER', 'WORDPRESS_DB_USER');
@@ -79,11 +79,6 @@ $table_prefix = 'wp_';
  */
 define( 'WP_DEBUG', false );
 
-// If we're behind a proxy server and using HTTPS, we need to alert WordPress of that fact
-// see also http://codex.wordpress.org/Administration_Over_SSL#Using_a_Reverse_Proxy
-if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
-        $_SERVER['HTTPS'] = 'on';
-}
 
 /* That's all, stop editing! Happy publishing. */
 
