@@ -4,15 +4,13 @@ metadata:
   name: rt-wordpress
   namespace: gitops-app
   labels:
-    app: wordpress
-    app.kubernetes.io/component: wordpress
-    app.kubernetes.io/instance: wordpress
+    app.kubernetes.io/instance: poc-wp-mysql-wordpress
 spec:
   host: wordpress-dev.apps.bbassetnonprod.brazilsouth.aroapp.io
   to:
     kind: Service
-    name: wordpress-svc-clusterip
+    name: svc-wordpress
     weight: 100
   port:
-    targetPort: 8080-tcp
+    targetPort: 8080
   wildcardPolicy: None
