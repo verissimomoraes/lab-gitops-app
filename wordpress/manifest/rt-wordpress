@@ -3,8 +3,10 @@ apiVersion: route.openshift.io/v1
 metadata:
   name: rt-wordpress
   namespace: gitops-app
-  annotations:
-    openshift.io/host.generated: 'true'
+  labels:
+    app: wordpress
+    app.kubernetes.io/component: wordpress
+    app.kubernetes.io/instance: wordpress
 spec:
   host: wordpress-dev.apps.bbassetnonprod.brazilsouth.aroapp.io
   to:
@@ -12,5 +14,5 @@ spec:
     name: wordpress-svc-clusterip
     weight: 100
   port:
-    targetPort: 8080
+    targetPort: 8080-tcp
   wildcardPolicy: None
