@@ -1,22 +1,12 @@
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
-  name: wordpress
+  name: svc-wordpress
   namespace: gitops-app
-  labels:
-    app: wordpress
-    app.kubernetes.io/component: wordpress
-    app.kubernetes.io/instance: wordpress
 spec:
+  selector:
+    app: wordpress
   ports:
-    - name: 8080-tcp
-      protocol: TCP
+    - protocol: TCP
       port: 8080
       targetPort: 8080
-    - name: 8443-tcp
-      protocol: TCP
-      port: 8443
-      targetPort: 8443
-  type: ClusterIP
-  selector:
-    deployment: wordpress
