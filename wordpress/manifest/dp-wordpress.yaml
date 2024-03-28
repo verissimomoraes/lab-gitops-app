@@ -27,6 +27,13 @@ spec:
               name: wordpress-secret
           - configMapRef:
               name: wp-configmap
+        resources:
+          limits:
+            cpu: 2m
+            memory: 512Mi
+          requests:
+            cpu: 1m
+            memory: 128Mi
         ports:
         - containerPort: 80
           name: wordpress
