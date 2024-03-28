@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: st-mysql
-  namespace: wordpress
+  namespace: gitops-app
 spec:
   replicas: 1
   serviceName: mysql
@@ -39,7 +39,7 @@ spec:
   volumeClaimTemplates:
   - metadata:
       name: mysql-data
-      namespace: wordpress
+      namespace: gitops-app
     spec:
       storageClassName: longhorn
       accessModes:

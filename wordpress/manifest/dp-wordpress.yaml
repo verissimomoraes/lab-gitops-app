@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: wordpress
+  namespace: gitops-app
   name: wordpress
   labels:
     app: wordpress

@@ -4,7 +4,7 @@ metadata:
   labels:
     app: wordpress
   name: wordpress-svc-clusterip
-  namespace: wordpress
+  namespace: gitops-app
 spec:
   ports:
   - port: 80
