@@ -20,7 +20,7 @@ spec:
         tier: frontend
     spec:
       containers:
-      - image: image-registry.openshift-image-registry.svc:5000/gitops-app/wordpress:1
+      - image: image-registry.openshift-image-registry.svc:5000/gitops-app/wordpress:latest
         name: wordpress
         envFrom:
           - secretRef:
