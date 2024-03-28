@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: wordpress.54.158.81.133.sslip.io
+  - host: wordpress-dev.apps.bbassetnonprod.brazilsouth.aroapp.io
     http:
       paths:
       - backend:
