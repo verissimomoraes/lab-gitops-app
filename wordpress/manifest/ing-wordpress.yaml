@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-  - host: wordpress.54-236-253-195.sslip.io
+  - host: wordpress.35.171.150.239.sslip.io
     http:
       paths:
       - backend:
