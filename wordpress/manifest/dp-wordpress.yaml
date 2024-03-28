@@ -26,7 +26,7 @@ spec:
             memory: 1G
           limits:
             cpu: 500m
-            memory: 1
+            memory: 1G
       - image: wordpress:5.4-php7.2-apache
         name: wordpress
         envFrom:
