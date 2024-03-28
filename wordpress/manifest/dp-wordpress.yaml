@@ -36,7 +36,7 @@ spec:
             cpu: 1m
             memory: 128Mi
         ports:
-        - containerPort: 8080
+        - containerPort: 80
           name: wordpress
         volumeMounts:
         - name: wordpress-persistent-storage
