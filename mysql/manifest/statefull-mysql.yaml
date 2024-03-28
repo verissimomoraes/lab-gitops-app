@@ -35,7 +35,7 @@ spec:
       namespace: gitops-app
     spec:
       #storageClassName: longhorn
-      storageClassName: azurefile-csi
+      #storageClassName: azurefile-csi
       accessModes:
         - ReadWriteOnce
       resources:
