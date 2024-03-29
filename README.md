@@ -5,6 +5,12 @@ Poc de demonstração de utilização do gitops (pós 2024)
 Cluster Kubernetes
 Rancher 
 Fleet
+---
+openshift
+# oc get pod <your pod name> -o yaml | grep -i serviceAccountName
+    serviceAccountName: default
+
+# oc adm policy add-scc-to-user anyuid -z default
 ```
 
 ## Estrutura do repositório
