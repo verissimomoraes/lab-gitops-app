@@ -2,10 +2,6 @@
 Poc de demonstração de utilização do gitops (pós 2024)
 ## Requisitos
 ```
-Cluster Kubernetes
-Rancher 
-Fleet
----
 openshift
 # oc get pod <your pod name> -o yaml | grep -i serviceAccountName
     serviceAccountName: default
