@@ -25,7 +25,7 @@ spec:
         - 1000710001
       fsGroup: 0
       containers:
-      - image: image-registry.openshift-image-registry.svc:5000/gitops-app/wordpress:10
+      - image: image-registry.openshift-image-registry.svc:5000/gitops-app/wordpress:11
         name: wordpress
         imagePullPolicy: Always
         envFrom:
