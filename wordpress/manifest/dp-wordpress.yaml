@@ -25,7 +25,7 @@ spec:
         - 1000710001
       fsGroup: 0
       containers:
-      - image: image-registry.openshift-image-registry.svc:5000/gitops-app/wordpress-2:1
+      - image: image-registry.openshift-image-registry.svc:5000/gitops-app/wordpress:latest
         name: wordpress
         imagePullPolicy: Always
         envFrom:
@@ -41,7 +41,7 @@ spec:
             cpu: 1
             memory: 1024Mi
         ports:
-        - containerPort: 80
+        - containerPort: 8080
           name: wordpress
         volumeMounts:
         - name: wordpress-persistent-storage
