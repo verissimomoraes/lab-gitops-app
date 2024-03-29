@@ -19,11 +19,13 @@ spec:
         app: wordpress
         tier: frontend
     spec:
+      seLinuxOptions:
+        level: 's0:c27,c4'
+      supplementalGroups:
+        - 1000710001
+      fsGroup: 0
       containers:
-      - image: image-registry.openshift-image-registry.svc:5000/gitops-app/wordpress:10
-        network_mode: host
-        privileged: true
-        user: root
+      - image: image-registry.openshift-image-registry.svc:5000/gitops-app/wordpress:latest
         name: wordpress
         imagePullPolicy: Always
         envFrom:
