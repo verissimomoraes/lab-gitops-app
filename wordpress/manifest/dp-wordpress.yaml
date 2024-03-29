@@ -30,11 +30,11 @@ spec:
               name: wp-configmap
         resources:
           limits:
-            cpu: 2m
-            memory: 512Mi
+            cpu: 2
+            memory: 2048Mi
           requests:
-            cpu: 1m
-            memory: 128Mi
+            cpu: 1
+            memory: 1024Mi
         ports:
         - containerPort: 8080
           name: wordpress
