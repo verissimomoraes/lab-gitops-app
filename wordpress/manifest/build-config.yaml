@@ -2,7 +2,7 @@ kind: BuildConfig
 apiVersion: build.openshift.io/v1
 metadata:
   name: wordpress
-  namespace: gitops-app
+  namespace: multilayer-app
 spec:
   nodeSelector: null
   output:
