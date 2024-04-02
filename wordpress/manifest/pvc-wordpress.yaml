@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  namespace: gitops-app
+  namespace: multilayer-app
   name: wp-pv-claim
   labels:
     app: wordpress

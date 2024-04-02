@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: st-mysql
-  namespace: gitops-app
+  namespace: multilayer-app
 spec:
   replicas: 1
   serviceName: mysql
@@ -32,7 +32,7 @@ spec:
   volumeClaimTemplates:
   - metadata:
       name: mysql-data
-      namespace: gitops-app
+      namespace: multilayer-app
     spec:
       #storageClassName: longhorn
       #storageClassName: azurefile-csi

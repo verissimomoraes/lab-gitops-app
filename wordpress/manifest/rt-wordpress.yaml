@@ -2,7 +2,7 @@ kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
   name: rt-wordpress
-  namespace: gitops-app
+  namespace: multilayer-app
   labels:
     app.kubernetes.io/instance: poc-wp-mysql-wordpress
 spec:
