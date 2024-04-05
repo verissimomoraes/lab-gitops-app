@@ -29,26 +29,26 @@ spec:
         name: wordpress
         imagePullPolicy: Always
         env:
+        - name: WORDPRESS_DATABASE_USER
+          valueFrom:
+            secretKeyRef:
+              name: wordpress-secret
+              key: WORDPRESS_DB_USER  
         - name: WORDPRESS_DATABASE_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: my-secret
-              key: password
-        - name: WORDPRESS_DATABASE_USER
-          valueFrom:
-            configMapKeyRef:
-              name: my-secret
-              key: username
-        - name: WORDPRESS_DATABASE_NAME
-          valueFrom:
-            configMapKeyRef:
-              name: my-secret
-              key: database
+              name: wordpress-secret
+              key: WORDPRESS_DB_PASSWORD
         - name: WORDPRESS_DATABASE_HOST
           valueFrom:
             configMapKeyRef:
-              name: my-secret
-              key: hostname
+              name:  wp-configmap
+              key: WORDPRESS_DB_HOST
+        - name: WORDPRESS_DATABASE_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: wp-configmap
+              key: WORDPRESS_DB_NAME
         envFrom:
           - secretRef:
               name: wordpress-secret
