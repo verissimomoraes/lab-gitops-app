@@ -10,7 +10,6 @@ spec:
     - ReadWriteMany
   #storageClassName: longhorn
   #storageClassName: azurefile-csi
-  storageClassName: lvms-vg1
   resources:
     requests:
       storage: 1Gi
