@@ -28,6 +28,27 @@ spec:
       - image: bitnami/wordpress:6
         name: wordpress
         imagePullPolicy: Always
+        env:
+        - name: WORDPRESS_DATABASE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: my-secret
+              key: password
+        - name: WORDPRESS_DATABASE_USER
+          valueFrom:
+            configMapKeyRef:
+              name: my-secret
+              key: username
+        - name: WORDPRESS_DATABASE_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: my-secret
+              key: database
+        - name: WORDPRESS_DATABASE_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: my-secret
+              key: hostname
         envFrom:
           - secretRef:
               name: wordpress-secret
