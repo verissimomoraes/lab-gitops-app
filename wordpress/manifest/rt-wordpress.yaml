@@ -6,7 +6,7 @@ metadata:
   labels:
     app.kubernetes.io/instance: poc-wp-mysql-wordpress
 spec:
-  host: wordpress-dev.apps.bbassetnonprod.brazilsouth.aroapp.io
+  host: wordpress-dev.apps.ocp4.example.com
   to:
     kind: Service
     name: svc-wordpress
