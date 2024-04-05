@@ -25,7 +25,7 @@ spec:
         - 1000710001
       fsGroup: 0
       containers:
-      - image: image-registry.openshift-image-registry.svc:5000/multilayer-app/wordpress:latest
+      - image: wordpress:5.4-php7.2-apache
         name: wordpress
         imagePullPolicy: Always
         envFrom:
