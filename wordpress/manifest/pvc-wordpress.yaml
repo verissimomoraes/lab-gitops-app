@@ -9,7 +9,8 @@ spec:
   accessModes:
     - ReadWriteMany
   #storageClassName: longhorn
-  storageClassName: azurefile-csi
+  #storageClassName: azurefile-csi
+  storageClassName: nfs-storage
   resources:
     requests:
       storage: 1Gi
